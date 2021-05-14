@@ -8,15 +8,12 @@
     <title>New Player</title>
   </head>
   <body>
-    <!-- 長いので省略 -->
     <div class="container" layout:fragment="content">
       <h1>New Player</h1>
       <form th:action="@{/players}" th:method="post" th:object="${player}">
-        <!-- ② -->
         <div class="form-group" th:classappend="${#fields.hasErrors('name')}? has-error">
           <label class="control-label">名前</label>
           <input class="form-control" type="text" th:field="*{name}" />
-          <!-- ③ -->
           <span class="text-danger" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
         </div>
         <div class="form-group" th:classappend="${#fields.hasErrors('age')}? has-error">
