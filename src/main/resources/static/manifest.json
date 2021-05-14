@@ -1,7 +1,8 @@
 {
   "name": "baseball sample",
   "short_name": "baseball",
-  "start_url": ".",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#01508E",
   "theme_color": "#01508E",
